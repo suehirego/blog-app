@@ -1,0 +1,29 @@
+$extrasmall: 480px; //blue //phone
+$small: 576px; //yellow // mobile
+$medium: 720px; //orange //tablet
+$large: 960px;  //green  /// large
+$laptop: 1020px;  //aquamarine  /// laptop
+
+@mixin phone {
+      @media (max-width: #{$extrasmall}) {
+            @content
+      }
+};
+
+@mixin mobile {
+      @media (max-width: #{$small}) {
+            @content
+      }
+};
+
+@mixin tablet {
+      @media (max-width: #{$medium}) {
+            @content
+      }
+};
+
+@mixin large {
+      @media (max-width: #{$large}) {
+            @content
+      }
+};

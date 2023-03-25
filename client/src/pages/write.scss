@@ -1,0 +1,181 @@
+//WRITE
+$background: #F7F7F7;
+@import "../global.scss";
+
+.add {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: calc(100vh - 150px);
+    flex-direction: column;
+    @include large {
+        background-color: green;
+    }
+    @include tablet {
+        height: 100%;
+        background-color: orange;
+    }
+    @include mobile {
+        flex-direction: column;
+        background-color: yellow;
+    }
+
+    .content {
+        gap: 50px;
+        display: flex;
+        flex-direction: row;
+        @include tablet {
+            flex-direction: column;
+        }
+
+        .addContent {
+            flex: 5;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            input {
+                height: 323px;
+                height: 35px;
+                padding: 0px;
+                padding-left: 20px;
+                border-radius: 0%;
+                border: 1px solid lightgray;
+
+            }
+
+            input::placeholder {
+                font-size: 14px;
+            }
+
+            input:focus {
+                outline: none;
+            }
+
+            input[type="file"] {
+                height: 30px;
+
+                margin-top: auto;
+                border: 1px solid lightgrey;
+            }
+
+            .custom-file-input::-webkit-file-upload-button {
+                visibility: hidden;
+            }
+
+            .custom-file-input::before {
+                content: 'Upload Profile Pic';
+                display: inline-block;
+                border: none;
+                border-radius: 3px;
+                padding: 5px 8px;
+                outline: none;
+                cursor: pointer;
+                font-weight: 300;
+                font-size: 10pt;
+                color: #363636;
+            }
+
+            .custom-file-input:hover::before {
+                border: none;
+                outline: none;
+            }
+
+            .custom-file-input:active::before {
+                outline: none;
+            }
+
+            .editorContainer {
+                height: 323px;
+                overflow: scroll;
+                border: 0.4px solid lightgray;
+                // background-color: #7D3780;
+
+                .editor {
+                    height: 100%;
+                    border: none;
+                }
+            }
+        }
+
+        .addMenu {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .item {
+                padding: 10px 15px;
+                gap: 5px 10px;
+                flex: 1;
+                font-size: 13px;
+                color: #555;
+                display: flex;
+                flex-direction: column;
+                border: 1px solid lightgray;
+
+                h2 {
+                    font-size: 18px;
+                }
+
+                .formInput {
+                    gap: 12px;
+                    display: flex;
+                    flex-direction: column;
+
+                    select {
+                        width: 70%;
+                        color: #555;
+                        padding: 5px;
+                        border: 1px solid lightgray;
+                    }
+                }
+
+                .menuLink{
+                    gap: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 13px;
+
+                    input{
+                        width: 70%;
+                        color: #555;
+                        padding: 5px;
+                        border: 1px solid lightgray;
+                    }
+                }
+
+                .publishWrapper {
+                    display: flex;
+                    margin-top: auto;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .buttons {
+                        display: flex;
+                        margin-top: 10px;
+                        justify-content: space-between;
+
+                        p{
+                            color: red;
+                        }
+
+                        .publishBtn {
+                            cursor: pointer;
+                            color: white;
+                            padding: 8px 19px;
+                            border-radius: 2px;
+                            margin-bottom: auto;
+                            background-color: #7D3780;
+                            border: 1px solid #7D3780;
+                        }
+                    }
+
+                }
+
+            }
+
+        }
+    }
+}
